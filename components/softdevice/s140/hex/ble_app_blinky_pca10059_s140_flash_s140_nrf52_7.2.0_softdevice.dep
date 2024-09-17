@@ -1,6 +1,6 @@
 Dependencies for Project 'ble_app_blinky_pca10059_s140', Target 'flash_s140_nrf52_7.2.0_softdevice': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
-F (..\..\..\main.c)(0x66E975CD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\config --reduce_paths-I.\RTE\_flash_s140_nrf52_7.2.0_softdevice-ID:\EmbeddedSoftware\MDK\MDK_FILE\NordicSemiconductor\nRF_DeviceFamilyPack_NordicLicense\8.63.1\Device\Include-ID:\EmbeddedSoftware\MDK\MDK_FILE\ARM\CMSIS\Include-D__UVISION_VERSION="529" -D_RTE_ -DNRF52840_XXAA -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o ..\..\..\..\..\..\components\softdevice\s140\hex\main.o --omf_browse ..\..\..\..\..\..\components\softdevice\s140\hex\main.crf --depend ..\..\..\..\..\..\components\softdevice\s140\hex\main.d)
+F (..\..\..\main.c)(0x66E98053)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\config --reduce_paths-I.\RTE\_flash_s140_nrf52_7.2.0_softdevice-ID:\EmbeddedSoftware\MDK\MDK_FILE\NordicSemiconductor\nRF_DeviceFamilyPack\8.44.1\Device\Include-ID:\EmbeddedSoftware\MDK\MDK_FILE\ARM\CMSIS\Include-D__UVISION_VERSION="529" -D_RTE_ -DNRF52840_XXAA -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o ..\..\..\..\..\..\components\softdevice\s140\hex\main.o --omf_browse ..\..\..\..\..\..\components\softdevice\s140\hex\main.crf --depend ..\..\..\..\..\..\components\softdevice\s140\hex\main.d)
 I (D:\EmbeddedSoftware\MDK\MDK_FILE\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
 I (D:\EmbeddedSoftware\MDK\MDK_FILE\ARM\ARMCC\include\string.h)(0x5D9AD218)
 F (..\config\sdk_config.h)(0x61210B94)()
@@ -55,5 +55,6 @@ F (..\..\..\..\..\..\external\segger_rtt\SEGGER_RTT_printf.c)(0x6120D62C)()
 F (..\..\..\..\..\..\components\softdevice\common\nrf_sdh.c)(0x61210B94)()
 F (..\..\..\..\..\..\components\softdevice\common\nrf_sdh_ble.c)(0x61210B94)()
 F (..\..\..\..\..\..\components\softdevice\common\nrf_sdh_soc.c)(0x61210B94)()
+F (RTE\Device\nRF52840_xxAA\arm_startup_nrf52840.s)(0x61972BE0)()
 F (RTE\Device\nRF52840_xxAA\startup_nrf_common.c)(0x65D58C40)()
 F (RTE\Device\nRF52840_xxAA\system_nrf52.c)(0x65D58C48)()
