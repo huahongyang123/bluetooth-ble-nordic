@@ -155,7 +155,7 @@ void nrf_ble_amts_init(nrf_ble_amts_t * p_ctx, amts_evt_handler_t evt_handler)
 {
     ret_code_t    err_code;
     uint16_t      service_handle;
-    ble_uuid_t    ble_uuid;
+    ble_uuid_t    ble_uuid; 
     ble_uuid128_t base_uuid = {SERVICE_UUID_BASE};
 
     err_code = sd_ble_uuid_vs_add(&base_uuid, &(p_ctx->uuid_type));
