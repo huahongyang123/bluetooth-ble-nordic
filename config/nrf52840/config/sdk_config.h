@@ -202,9 +202,6 @@
 #define PM_HANDLER_SEC_DELAY_MS 0
 #endif
 
-// </e>
-
-// </h> 
 //==========================================================
 
 // <h> nRF_BLE_Services 
@@ -4689,10 +4686,6 @@
 #ifndef NRFX_WDT_CONFIG_DEBUG_COLOR
 #define NRFX_WDT_CONFIG_DEBUG_COLOR 0
 #endif
-
-// </e>
-
-// </e>
 
 // <e> NRF_CLOCK_ENABLED - nrf_drv_clock - CLOCK peripheral driver - legacy layer
 //==========================================================
@@ -11673,15 +11666,6 @@
 #define NRF_SDH_SOC_STACK_OBSERVER_PRIO 0
 #endif
 
-// </h> 
-//==========================================================
-
-// </h> 
-//==========================================================
-
-
-// </e>
-
 // <e> NRF_SDH_SOC_ENABLED - nrf_sdh_soc - SoftDevice SoC event handler
 //==========================================================
 #ifndef NRF_SDH_SOC_ENABLED
@@ -11721,18 +11705,6 @@
 #ifndef POWER_CONFIG_SOC_OBSERVER_PRIO
 #define POWER_CONFIG_SOC_OBSERVER_PRIO 0
 #endif
-
-// </h> 
-//==========================================================
-
-// </h> 
-//==========================================================
-
-
-// </e>
-
-// </h> 
-//==========================================================
 
 // <<< end of configuration section >>>
 #endif //SDK_CONFIG_H

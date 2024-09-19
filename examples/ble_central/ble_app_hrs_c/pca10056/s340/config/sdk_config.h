@@ -6146,10 +6146,6 @@
 #define NRFX_WDT_CONFIG_DEBUG_COLOR 0
 #endif
 
-// </e>
-
-// </e>
-
 // <e> NRF_CLOCK_ENABLED - nrf_drv_clock - CLOCK peripheral driver - legacy layer
 //==========================================================
 #ifndef NRF_CLOCK_ENABLED
