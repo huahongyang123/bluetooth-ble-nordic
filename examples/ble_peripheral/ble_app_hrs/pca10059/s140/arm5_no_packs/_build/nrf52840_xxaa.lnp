@@ -120,8 +120,8 @@
 ".\_build\ctr_drbg.o"
 ".\_build\platform_util.o"
 "..\..\..\..\..\..\external\nrf_cc310\lib\cortex-m4\hard-float\short-wchar\nrf_cc310_0.9.13.lib"
-".\_build\system_nrf52.o"
 ".\_build\arm_startup_nrf52840.o"
+".\_build\system_nrf52.o"
 --library_type=microlib --strict --scatter ".\_build\nrf52840_xxaa.sct"
 --diag_suppress 6330 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

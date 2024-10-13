@@ -68,6 +68,7 @@ uint16_t nrf_ble_qwrs_on_qwr_evt(nrf_ble_qwrs_t *p_qwrs,
             NRF_LOG_ERROR("nrf_ble_qwr_value_get failed.");
             return BLE_GATT_STATUS_ATTERR_INSUF_AUTHORIZATION;
         }
+        
         if (p_evt->evt_type == NRF_BLE_QWR_EVT_AUTH_REQUEST)
         {
             cur_evt.evt_type = BLE_QWRS_CHECK_RCVD_DATA;

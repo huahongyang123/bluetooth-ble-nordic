@@ -2942,8 +2942,6 @@ Section Cross References
     ctr_drbg.o(i.mbedtls_ctr_drbg_update_ret) refers to platform_util.o(i.mbedtls_platform_zeroize) for mbedtls_platform_zeroize
     platform_util.o(i.mbedtls_platform_zeroize) refers to platform_util.o(.data) for .data
     platform_util.o(.data) refers to memseta.o(.text) for memset
-    system_nrf52.o(i.SystemCoreClockUpdate) refers to system_nrf52.o(.data) for .data
-    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.nvmc_config) for nvmc_config
     arm_startup_nrf52840.o(RESET) refers to arm_startup_nrf52840.o(STACK) for __initial_sp
     arm_startup_nrf52840.o(RESET) refers to arm_startup_nrf52840.o(.text) for Reset_Handler
     arm_startup_nrf52840.o(RESET) refers to nrfx_clock.o(i.POWER_CLOCK_IRQHandler) for POWER_CLOCK_IRQHandler
@@ -2955,6 +2953,8 @@ Section Cross References
     arm_startup_nrf52840.o(RESET) refers to ssi_hal.c.obj(.text.CRYPTOCELL_IRQHandler) for CRYPTOCELL_IRQHandler
     arm_startup_nrf52840.o(.text) refers to system_nrf52.o(i.SystemInit) for SystemInit
     arm_startup_nrf52840.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_nrf52.o(i.SystemCoreClockUpdate) refers to system_nrf52.o(.data) for .data
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.nvmc_config) for nvmc_config
     crys_hash.c.obj(.text.hashUpdate) refers to ssi_pal_mem.c.obj(.text.SaSi_PalMemCopy) for SaSi_PalMemCopy
     crys_hash.c.obj(.text.CRYS_HASH_Init) refers to ssi_pal_mem.c.obj(.text.SaSi_PalMemSetZero) for SaSi_PalMemSetZero
     crys_hash.c.obj(.text.CRYS_HASH_Init) refers to sw_llf_hash_sha512.c.obj(.text.ProcessSwHash512) for ProcessSwHash512
@@ -4510,12 +4510,12 @@ Removing Unused input sections from the image.
     Removing ctr_drbg.o(i.mbedtls_ctr_drbg_update_ret), (48 bytes).
     Removing platform_util.o(i.mbedtls_platform_zeroize), (20 bytes).
     Removing platform_util.o(.data), (4 bytes).
+    Removing arm_startup_nrf52840.o(HEAP), (8192 bytes).
     Removing system_nrf52.o(.rev16_text), (4 bytes).
     Removing system_nrf52.o(.revsh_text), (4 bytes).
     Removing system_nrf52.o(.rrx_text), (6 bytes).
     Removing system_nrf52.o(i.SystemCoreClockUpdate), (16 bytes).
     Removing system_nrf52.o(i.nvmc_wait), (16 bytes).
-    Removing arm_startup_nrf52840.o(HEAP), (8192 bytes).
     Removing crys_hash.c.obj(.text), (0 bytes).
     Removing crys_hash.c.obj(.data), (0 bytes).
     Removing crys_hash.c.obj(.bss), (0 bytes).
@@ -7653,7 +7653,7 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00027000   0x00027000   0x00000200   Data   RO        10132    RESET               arm_startup_nrf52840.o
+    0x00027000   0x00027000   0x00000200   Data   RO        10076    RESET               arm_startup_nrf52840.o
     0x00027200   0x00027200   0x00000000   Code   RO        10624  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
     0x00027200   0x00027200   0x00000004   Code   RO        10720    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
     0x00027204   0x00027204   0x00000004   Code   RO        10723    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
@@ -7666,7 +7666,7 @@ Memory Map of the image
     0x00027214   0x00027214   0x000000c8   Code   RO         7756    .emb_text           nrf_atfifo.o
     0x000272dc   0x000272dc   0x000000e2   Code   RO         7892    .emb_text           nrf_atomic.o
     0x000273be   0x000273be   0x00000002   PAD
-    0x000273c0   0x000273c0   0x00000024   Code   RO        10133    .text               arm_startup_nrf52840.o
+    0x000273c0   0x000273c0   0x00000024   Code   RO        10077    .text               arm_startup_nrf52840.o
     0x000273e4   0x000273e4   0x00000062   Code   RO        10632    .text               mc_w.l(uldiv.o)
     0x00027446   0x00027446   0x0000001e   Code   RO        10634    .text               mc_w.l(llshl.o)
     0x00027464   0x00027464   0x00000008   Code   RO        10636    .text               mc_w.l(ctype_o.o)
@@ -7815,7 +7815,7 @@ Memory Map of the image
     0x0002df50   0x0002df50   0x00000028   Code   RO         6222    i.RNG_IRQHandler    nrfx_rng.o
     0x0002df78   0x0002df78   0x00000010   Code   RO         7133    i.RTC1_IRQHandler   drv_rtc.o
     0x0002df88   0x0002df88   0x00000004   Code   RO         9599    i.SWI2_EGU2_IRQHandler  nrf_sdh.o
-    0x0002df8c   0x0002df8c   0x000001d0   Code   RO        10078    i.SystemInit        system_nrf52.o
+    0x0002df8c   0x0002df8c   0x000001d0   Code   RO        10085    i.SystemInit        system_nrf52.o
     0x0002e15c   0x0002e15c   0x0000000c   Code   RO         6168    i.UARTE0_UART0_IRQHandler  nrfx_prs.o
     0x0002e168   0x0002e168   0x0000000e   Code   RO        10751    i.__scatterload_copy  mc_w.l(handlers.o)
     0x0002e176   0x0002e176   0x00000002   Code   RO        10752    i.__scatterload_null  mc_w.l(handlers.o)
@@ -8306,7 +8306,7 @@ Memory Map of the image
     0x00036274   0x00036274   0x000000ac   Code   RO         6500    i.nrfx_uarte_tx     nrfx_uarte.o
     0x00036320   0x00036320   0x0000001c   Code   RO         6502    i.nrfx_uarte_tx_in_progress  nrfx_uarte.o
     0x0003633c   0x0003633c   0x00000108   Code   RO         6503    i.nrfx_uarte_uninit  nrfx_uarte.o
-    0x00036444   0x00036444   0x00000018   Code   RO        10079    i.nvmc_config       system_nrf52.o
+    0x00036444   0x00036444   0x00000018   Code   RO        10086    i.nvmc_config       system_nrf52.o
     0x0003645c   0x0003645c   0x00000054   Code   RO           16    i.on_adv_evt        main.o
     0x000364b0   0x000364b0   0x0000001c   Code   RO           17    i.on_conn_params_evt  main.o
     0x000364cc   0x000364cc   0x000000a8   Code   RO         1832    i.on_connected_evt  nrf_ble_gatt.o
@@ -8818,7 +8818,7 @@ Memory Map of the image
     0x20002f5c   COMPRESSED   0x00000040   Data   RW         9191    .data               nrf_log_str_formatter.o
     0x20002f9c   COMPRESSED   0x00000003   Data   RW         9618    .data               nrf_sdh.o
     0x20002f9f   COMPRESSED   0x00000001   Data   RW         9728    .data               nrf_sdh_ble.o
-    0x20002fa0   COMPRESSED   0x00000004   Data   RW        10081    .data               system_nrf52.o
+    0x20002fa0   COMPRESSED   0x00000004   Data   RW        10088    .data               system_nrf52.o
     0x20002fa4   COMPRESSED   0x00000014   Data   RW         7359    fs_data             fds.o
     0x20002fb8        -       0x000004e8   Zero   RW           26    .bss                main.o
     0x200034a0        -       0x000000a0   Zero   RW          828    .bss                auth_status_tracker.o
@@ -8856,7 +8856,7 @@ Memory Map of the image
     0x20006c6c        -       0x00000004   Zero   RW        10470    .bss.m_irr_sem      nrf_cc310_0.9.13.lib(ssi_hal.c.obj)
     0x20006c70        -       0x00000004   Zero   RW        10471    .bss.use_count      nrf_cc310_0.9.13.lib(ssi_hal.c.obj)
     0x20006c74   COMPRESSED   0x00000004   PAD
-    0x20006c78        -       0x00002000   Zero   RW        10130    STACK               arm_startup_nrf52840.o
+    0x20006c78        -       0x00002000   Zero   RW        10074    STACK               arm_startup_nrf52840.o
     0x20008c78        -       0x00000004   Zero   RW        10742    pSaSiGenVecMutex    anon$$obj.o
     0x20008c7c        -       0x00000004   Zero   RW        10743    pSaSiRndCryptoMutex  anon$$obj.o
     0x20008c80        -       0x00000004   Zero   RW        10745    sasiAsymCryptoMutex  anon$$obj.o
@@ -8903,7 +8903,7 @@ Image component sizes
       2160        552        553         16          0      34063   gatt_cache_manager.o
        842        138        462         12          0      17031   gatts_cache_manager.o
        946         34         32          0        216      15052   id_manager.o
-      2242        456        150        172       1256     224106   main.o
+      2242        456        150        172       1256     224102   main.o
          0          0         17          0          0       5545   mem_manager.o
        342          0          0          0          0       6722   nrf_atfifo.o
        170          0          0          0          0       4804   nrf_atflags.o
@@ -8956,7 +8956,7 @@ Image component sizes
        488         60          0          4          0      32403   system_nrf52.o
 
     ----------------------------------------------------------------------
-     51956       7290       8648        984      23756    1588044   Object Totals
+     51956       7290       8648        984      23756    1588040   Object Totals
          0          0         32          0         24          0   (incl. Generated)
        110          0         87         12          4          0   (incl. Padding)
 
@@ -9059,8 +9059,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     79256      10144      20368        984      23768    1524016   Grand Totals
-     79256      10144      20368        192      23768    1524016   ELF Image Totals (compressed)
+     79256      10144      20368        984      23768    1524012   Grand Totals
+     79256      10144      20368        192      23768    1524012   ELF Image Totals (compressed)
      79256      10144      20368        192          0          0   ROM Totals
 
 ==============================================================================

@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "sdk_config.h": "c"
+        "sdk_config.h": "c",
+        "ble_conn_params.h": "c"
     }
 }

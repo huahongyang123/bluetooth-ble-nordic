@@ -1,5 +1,4 @@
 
-
 #include "sdk_common.h"
 #if NRF_MODULE_ENABLED(NRF_BLE_GATT)
 

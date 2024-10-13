@@ -206,6 +206,7 @@ typedef struct
         {
             fds_init_step_t   step;               // The current step the operation is at.
         } init;
+
         struct
         {
             fds_header_t      header;
@@ -214,6 +215,7 @@ typedef struct
             fds_write_step_t  step;             // The current step the operation is at.
             uint32_t          record_to_delete; // The record to delete in case this is an update.
         } write;
+        
         struct
         {
             fds_delete_step_t step;

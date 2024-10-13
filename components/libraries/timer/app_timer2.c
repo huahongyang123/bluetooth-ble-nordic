@@ -574,6 +574,7 @@ ret_code_t app_timer_init(void)
     };
 
     err_code = NRF_ATFIFO_INIT(m_req_fifo);
+    
     if (err_code != NRFX_SUCCESS)
     {
         return err_code;

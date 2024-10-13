@@ -324,6 +324,7 @@ static void csc_meas_timeout_handler(void * p_context)
     csc_sim_measurement(&cscs_measurement);
 
     err_code = ble_cscs_measurement_send(&m_cscs, &cscs_measurement);
+
     if ((err_code != NRF_SUCCESS) &&
         (err_code != NRF_ERROR_INVALID_STATE) &&
         (err_code != NRF_ERROR_RESOURCES) &&
@@ -333,6 +334,7 @@ static void csc_meas_timeout_handler(void * p_context)
     {
         APP_ERROR_HANDLER(err_code);
     }
+    
     if (m_auto_calibration_in_progress)
     {
         err_code = ble_sc_ctrlpt_rsp_send(&(m_cscs.ctrl_pt), BLE_SCPT_SUCCESS);
